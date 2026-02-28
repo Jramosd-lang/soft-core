@@ -47,13 +47,17 @@
             label3 = new Label();
             panel6 = new Panel();
             panel1 = new Panel();
+            button1 = new Button();
+            textBox1 = new TextBox();
             contenedorProductos = new FlowLayoutPanel();
             label1 = new Label();
+            button2 = new Button();
             tableLayoutPanel1.SuspendLayout();
             panel5.SuspendLayout();
             panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)tablaPedido).BeginInit();
             panel7.SuspendLayout();
+            panel6.SuspendLayout();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -92,6 +96,7 @@
             panel8.Dock = DockStyle.Fill;
             panel8.Location = new Point(12, 125);
             panel8.Name = "panel8";
+            panel8.Padding = new Padding(20, 0, 20, 0);
             panel8.Size = new Size(336, 194);
             panel8.TabIndex = 7;
             // 
@@ -118,7 +123,7 @@
             tablaPedido.Dock = DockStyle.Fill;
             tablaPedido.EnableHeadersVisualStyles = false;
             tablaPedido.GridColor = Color.FromArgb(243, 244, 246);
-            tablaPedido.Location = new Point(0, 0);
+            tablaPedido.Location = new Point(20, 0);
             tablaPedido.MultiSelect = false;
             tablaPedido.Name = "tablaPedido";
             tablaPedido.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
@@ -136,7 +141,7 @@
             dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(51, 51, 51);
             tablaPedido.RowsDefaultCellStyle = dataGridViewCellStyle3;
             tablaPedido.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            tablaPedido.Size = new Size(336, 194);
+            tablaPedido.Size = new Size(296, 194);
             tablaPedido.TabIndex = 4;
             // 
             // dataGridViewTextBoxColumn7
@@ -233,6 +238,7 @@
             // 
             // panel6
             // 
+            panel6.Controls.Add(button2);
             panel6.Dock = DockStyle.Bottom;
             panel6.Location = new Point(12, 319);
             panel6.Name = "panel6";
@@ -241,6 +247,8 @@
             // 
             // panel1
             // 
+            panel1.Controls.Add(button1);
+            panel1.Controls.Add(textBox1);
             panel1.Controls.Add(contenedorProductos);
             panel1.Controls.Add(label1);
             panel1.Dock = DockStyle.Fill;
@@ -249,24 +257,58 @@
             panel1.Size = new Size(706, 444);
             panel1.TabIndex = 2;
             // 
+            // button1
+            // 
+            button1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            button1.BackColor = Color.FromArgb(28, 67, 95);
+            button1.FlatAppearance.BorderColor = Color.FromArgb(28, 67, 95);
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Image = Properties.Resources.search__1_;
+            button1.Location = new Point(639, 52);
+            button1.Name = "button1";
+            button1.Size = new Size(37, 29);
+            button1.TabIndex = 3;
+            button1.UseVisualStyleBackColor = false;
+            // 
+            // textBox1
+            // 
+            textBox1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            textBox1.Location = new Point(138, 52);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(495, 27);
+            textBox1.TabIndex = 2;
+            textBox1.Text = "  Buscar productos por nombre";
+            // 
             // contenedorProductos
             // 
             contenedorProductos.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             contenedorProductos.AutoScroll = true;
-            contenedorProductos.Location = new Point(33, 71);
+            contenedorProductos.Location = new Point(33, 94);
             contenedorProductos.Name = "contenedorProductos";
             contenedorProductos.Padding = new Padding(8);
-            contenedorProductos.Size = new Size(643, 347);
+            contenedorProductos.Size = new Size(643, 324);
             contenedorProductos.TabIndex = 1;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(33, 26);
+            label1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.FromArgb(28, 67, 95);
+            label1.Location = new Point(33, 52);
             label1.Name = "label1";
-            label1.Size = new Size(75, 20);
+            label1.Size = new Size(78, 20);
             label1.TabIndex = 0;
             label1.Text = "Productos";
+            // 
+            // button2
+            // 
+            button2.Location = new Point(20, 19);
+            button2.Name = "button2";
+            button2.Size = new Size(296, 29);
+            button2.TabIndex = 0;
+            button2.Text = "button2";
+            button2.UseVisualStyleBackColor = true;
             // 
             // crearPedido
             // 
@@ -282,6 +324,7 @@
             ((System.ComponentModel.ISupportInitialize)tablaPedido).EndInit();
             panel7.ResumeLayout(false);
             panel7.PerformLayout();
+            panel6.ResumeLayout(false);
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);
@@ -307,5 +350,8 @@
         private Panel panel1;
         private Label label1;
         private FlowLayoutPanel contenedorProductos;
+        private TextBox textBox1;
+        private Button button1;
+        private Button button2;
     }
 }
