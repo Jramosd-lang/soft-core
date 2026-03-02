@@ -1,4 +1,4 @@
-﻿namespace soft_core.productos
+namespace soft_core.productos
 {
     partial class gestionarPedidos
     {
@@ -79,19 +79,44 @@
             // 
             // tableLayoutPanel1
             // 
+            panelHeader = new Panel();
+            lblHeaderTitulo = new Label();
             tableLayoutPanel1.ColumnCount = 2;
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 69F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 31F));
-            tableLayoutPanel1.Controls.Add(panel1, 0, 0);
-            tableLayoutPanel1.Controls.Add(panel2, 1, 0);
+            tableLayoutPanel1.RowCount = 2;
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 60F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            tableLayoutPanel1.Controls.Add(panelHeader, 0, 0);
+            tableLayoutPanel1.Controls.Add(panel1, 0, 1);
+            tableLayoutPanel1.Controls.Add(panel2, 1, 1);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(0, 0);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
-            tableLayoutPanel1.RowCount = 1;
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             tableLayoutPanel1.Size = new Size(1482, 450);
             tableLayoutPanel1.TabIndex = 0;
+            // 
+            // panelHeader
+            // 
+            panelHeader.BackColor = Color.FromArgb(28, 67, 95);
+            panelHeader.Controls.Add(lblHeaderTitulo);
+            tableLayoutPanel1.SetColumnSpan(panelHeader, 2);
+            panelHeader.Dock = DockStyle.Fill;
+            panelHeader.Location = new Point(3, 3);
+            panelHeader.Name = "panelHeader";
+            panelHeader.Size = new Size(1476, 54);
+            panelHeader.TabIndex = 2;
+            // 
+            // lblHeaderTitulo
+            // 
+            lblHeaderTitulo.AutoSize = true;
+            lblHeaderTitulo.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold);
+            lblHeaderTitulo.ForeColor = Color.White;
+            lblHeaderTitulo.Location = new Point(24, 12);
+            lblHeaderTitulo.Name = "lblHeaderTitulo";
+            lblHeaderTitulo.Size = new Size(244, 32);
+            lblHeaderTitulo.TabIndex = 0;
+            lblHeaderTitulo.Text = "GESTIONAR PEDIDOS";
             // 
             // panel1
             // 
@@ -99,7 +124,7 @@
             panel1.Controls.Add(panel4);
             panel1.Controls.Add(panel3);
             panel1.Dock = DockStyle.Fill;
-            panel1.Location = new Point(3, 3);
+            panel1.Location = new Point(3, 63);
             panel1.Name = "panel1";
             panel1.Size = new Size(1016, 444);
             panel1.TabIndex = 0;
@@ -267,7 +292,7 @@
             // 
             panel2.Controls.Add(panel5);
             panel2.Dock = DockStyle.Fill;
-            panel2.Location = new Point(1025, 3);
+            panel2.Location = new Point(1025, 63);
             panel2.Name = "panel2";
             panel2.Size = new Size(454, 444);
             panel2.TabIndex = 1;
@@ -448,6 +473,8 @@
             Text = ".";
             Load += gestionarPedidos_Load;
             tableLayoutPanel1.ResumeLayout(false);
+            panelHeader.ResumeLayout(false);
+            panelHeader.PerformLayout();
             panel1.ResumeLayout(false);
             panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)tablaProductos).EndInit();
@@ -465,6 +492,8 @@
         #endregion
 
         private TableLayoutPanel tableLayoutPanel1;
+        private Panel panelHeader;
+        private Label lblHeaderTitulo;
         private Panel panel1;
         private Button button2;
         private Button button1;

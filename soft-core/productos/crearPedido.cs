@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -110,6 +110,42 @@ namespace soft_core.productos
                 asis++; // advance to next example image
             }
 
+            contenedorProductos.MouseEnter += (s, e) => contenedorProductos.Focus();
+            contenedorProductos.TabStop = true;
+        }
+
+        protected override void WndProc(ref Message m)
+        {
+            const int WM_MOUSEWHEEL = 0x020A;
+            if (m.Msg == WM_MOUSEWHEEL)
+            {
+                var pos = Cursor.Position;
+                var clientPos = PointToClient(pos);
+                var ctrl = GetChildAtPoint(clientPos);
+                if (ctrl != null && IsDescendantOf(ctrl, contenedorProductos))
+                {
+                    int delta = (short)((long)m.WParam >> 16);
+                    int lines = SystemInformation.MouseWheelScrollLines;
+                    if (lines <= 0) lines = 3;
+                    int scroll = -delta * SystemInformation.MouseWheelScrollDelta * lines / 120;
+                    var p = contenedorProductos.AutoScrollPosition;
+                    int maxY = Math.Max(0, contenedorProductos.DisplayRectangle.Height - contenedorProductos.ClientSize.Height);
+                    int newY = Math.Clamp(-p.Y + scroll, 0, maxY);
+                    contenedorProductos.AutoScrollPosition = new Point(-p.X, -newY);
+                    return;
+                }
+            }
+            base.WndProc(ref m);
+        }
+
+        private static bool IsDescendantOf(Control ctrl, Control ancestor)
+        {
+            while (ctrl != null)
+            {
+                if (ctrl == ancestor) return true;
+                ctrl = ctrl.Parent;
+            }
+            return false;
         }
 
         private static Image CreatePlaceholderImage(string text)

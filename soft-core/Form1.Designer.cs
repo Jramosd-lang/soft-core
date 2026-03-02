@@ -1,4 +1,4 @@
-﻿namespace soft_core
+namespace soft_core
 {
     partial class Form1
     {
@@ -16,7 +16,9 @@
         private void InitializeComponent()
         {
             tableLayoutPanel1 = new TableLayoutPanel();
+            panelContenido = new Panel();
             panel1 = new Panel();
+            appFooter = new UI.AppFooter();
             tableLayoutPanel2 = new TableLayoutPanel();
             panel2 = new Panel();
             label1 = new Label();
@@ -37,7 +39,9 @@
             button6 = new Button();
             button8 = new Button();
             button9 = new Button();
+            button10 = new Button();
             tableLayoutPanel1.SuspendLayout();
+            panelContenido.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
@@ -52,7 +56,7 @@
             tableLayoutPanel1.ColumnCount = 2;
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 320F));
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            tableLayoutPanel1.Controls.Add(panel1, 1, 0);
+            tableLayoutPanel1.Controls.Add(panelContenido, 1, 0);
             tableLayoutPanel1.Controls.Add(tableLayoutPanel2, 0, 0);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(0, 0);
@@ -62,13 +66,31 @@
             tableLayoutPanel1.Size = new Size(975, 787);
             tableLayoutPanel1.TabIndex = 0;
             // 
+            // panelContenido
+            // 
+            panelContenido.Controls.Add(panel1);
+            panelContenido.Controls.Add(appFooter);
+            panelContenido.Dock = DockStyle.Fill;
+            panelContenido.Location = new Point(323, 3);
+            panelContenido.Name = "panelContenido";
+            panelContenido.Size = new Size(649, 781);
+            panelContenido.TabIndex = 2;
+            // 
             // panel1
             // 
             panel1.Dock = DockStyle.Fill;
-            panel1.Location = new Point(323, 3);
+            panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(649, 781);
+            panel1.Size = new Size(649, 746);
             panel1.TabIndex = 0;
+            // 
+            // appFooter
+            // 
+            appFooter.Dock = DockStyle.Bottom;
+            appFooter.Location = new Point(0, 746);
+            appFooter.Name = "appFooter";
+            appFooter.Size = new Size(649, 35);
+            appFooter.TabIndex = 1;
             // 
             // tableLayoutPanel2
             // 
@@ -117,6 +139,7 @@
             panel3.Controls.Add(button7);
             panel3.Controls.Add(button4);
             panel3.Controls.Add(panel6);
+            panel3.Controls.Add(button10);
             panel3.Controls.Add(button2);
             panel3.Controls.Add(button3);
             panel3.Controls.Add(button1);
@@ -211,6 +234,26 @@
             label3.Size = new Size(116, 25);
             label3.TabIndex = 0;
             label3.Text = "RELACIONES";
+            // 
+            // button10
+            // 
+            button10.BackColor = Color.Transparent;
+            button10.Dock = DockStyle.Top;
+            button10.FlatAppearance.BorderSize = 0;
+            button10.FlatAppearance.MouseOverBackColor = Color.FromArgb(51, 86, 111);
+            button10.FlatStyle = FlatStyle.Flat;
+            button10.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold);
+            button10.ForeColor = Color.FromArgb(187, 199, 207);
+            button10.ImageAlign = ContentAlignment.MiddleLeft;
+            button10.Location = new Point(0, 245);
+            button10.Margin = new Padding(0);
+            button10.Name = "button10";
+            button10.Padding = new Padding(45, 0, 0, 0);
+            button10.Size = new Size(314, 50);
+            button10.TabIndex = 11;
+            button10.Text = "      Crear producto";
+            button10.TextAlign = ContentAlignment.MiddleLeft;
+            button10.UseVisualStyleBackColor = false;
             // 
             // button2
             // 
@@ -386,6 +429,7 @@
             Name = "Form1";
             Text = "Form1";
             tableLayoutPanel1.ResumeLayout(false);
+            panelContenido.ResumeLayout(false);
             tableLayoutPanel2.ResumeLayout(false);
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
@@ -401,7 +445,9 @@
         }
 
         private TableLayoutPanel tableLayoutPanel1;
+        private Panel panelContenido;
         private Panel panel1;
+        private UI.AppFooter appFooter;
         private TableLayoutPanel tableLayoutPanel2;
         private Panel panel2;
         private Label label1;
@@ -422,5 +468,6 @@
         private Label label4;
         private Button button9;
         private Button button8;
+        private Button button10;
     }
 }
