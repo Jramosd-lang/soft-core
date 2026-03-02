@@ -73,9 +73,49 @@ namespace soft_core.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap calendar_1 {
+            get {
+                object obj = ResourceManager.GetObject("calendar-1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap calendar_1__1_ {
+            get {
+                object obj = ResourceManager.GetObject("calendar-1 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap chart_no_axes_combined {
             get {
                 object obj = ResourceManager.GetObject("chart-no-axes-combined", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap circle_alert {
+            get {
+                object obj = ResourceManager.GetObject("circle-alert", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap circle_alert__1_ {
+            get {
+                object obj = ResourceManager.GetObject("circle-alert (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -136,6 +176,26 @@ namespace soft_core.Properties {
         internal static System.Drawing.Bitmap shield_user {
             get {
                 object obj = ResourceManager.GetObject("shield-user", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap triangle_alert {
+            get {
+                object obj = ResourceManager.GetObject("triangle-alert", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap triangle_alert__1_ {
+            get {
+                object obj = ResourceManager.GetObject("triangle-alert (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
