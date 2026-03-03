@@ -1,3 +1,6 @@
 <Solution>
-  <Project Path="soft-core/soft-core.csproj" />
+  <Project Path="AccesoDatos/AccesoDatos.csproj" />
+  <Project Path="Entidades/Entidades.csproj" />
+  <Project Path="LogicaNegocio/LogicaNegocio.csproj" />
+  <Project Path="soft-core/Presentacion.csproj" />
 </Solution>

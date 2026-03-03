@@ -12,8 +12,12 @@ namespace soft_core
         {
             InitializeComponent();
             UI.Theme.ApplyForm(this);
-            OpenFormInPanel(new DashboardForm(), panel1);
+
+            // Asegurar que la ventana principal se maximice antes de abrir el child
             WindowState = FormWindowState.Maximized;
+
+            // Abrir el Dashboard después de que Form1 haya sido mostrado (tamaño ya calculado)
+            Shown += Form1_Shown;
 
             button1.Click += (s, e) => OpenFormInPanel(new DashboardForm(), panel1);
             button2.Click += (s, e) => OpenFormInPanel(new productos.InventarioForm(), panel1);
@@ -28,6 +32,13 @@ namespace soft_core
                 f.StartPosition = FormStartPosition.CenterParent;
                 f.ShowDialog(this);
             };
+        }
+
+        private void Form1_Shown(object? sender, EventArgs e)
+        {
+            // Evitar reentradas si Shown se dispara más veces
+            Shown -= Form1_Shown;
+            OpenFormInPanel(new DashboardForm(), panel1);
         }
 
         private void OpenFormInPanel(Form f, Panel container)
